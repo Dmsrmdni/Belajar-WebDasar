@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <style>
+    body {
+      font-family: "Quicksand", sans-serif;
+    }
+
+    h1 {
+      background-color: #aaaaaa;
+      padding: 30px;
+    }
+
+    .nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+    }
+
+    p {
+      width: 450px;
+    }
+
+    .relative {
+      position: relative;
+      top: 10px;
+      left: 100px;
+    }
+
+    .content {
+      max-width: 800px;
+      height: 400px;
+      margin: 0 auto;
+      background-color: deeppink;
+      overflow: auto;
+      padding: 10px;
+      margin: auto;
+      box-shadow: -10px 10px 2px 15px #666666;
+    }
+
+    p {
+      font-size: 1.5em;
+      font-weight: bold;
+    }
+
+    .article1 {
+      width: 15em;
+      border: 1px solid #333;
+      box-shadow: 8px 8px 5px #444;
+      padding: 8px 12px;
+      background-image: linear-gradient(180deg, #fff, #ddd 40%, #ccc);
+    }
+
+    .article2 {
+      width: 15em;
+      border: 1px solid #333;
+      box-shadow: 8px 8px 5px #444;
+      padding: 8px 12px;
+      background-image: linear-gradient(180deg, #fff, #ddd 40%, #ccc);
+    }
+
+    .bahan {
+      color: red;
+    }
+
+    .phone {
+      font-weight: bold;
+    }
+
+    .red {
+      color: red;
+    }
+
+    .skyblue {
+      background-color: skyblue;
+    }
+
+    .fancy {
+      font-weight: bold;
+      text-shadow: 4px 4px 3px #77f;
+    }
+
+    p.fancy {
+      text-shadow: 4px 4px 3px #00c8eb;
+    }
+
+    #special {
+      background-color: skyblue;
+    }
+
+    img~p {
+      color: green;
+    }
+
+    blockquote::before,
+    blockquote::after {
+      content: '"';
+      font-size: 24px;
+      font-style: italic;
+      font-weight: bold;
+    }
+
+    p::first-letter {
+      font-size: 32px;
+      font-weight: bold;
+    }
+
+    a[href*="ter"] {
+      color: brown;
+    }
+
+    /* <a> element yang menerapkan nilai pada href yang mengandung teks "example" */
+    a[href*="example"] {
+      background-color: silver;
+    }
+
+    /* <a> element yang menerapkan nilai pada href yang mengandung teks "insensitive" tidak mementingkan huruf kapital*/
+    a[href*="insensitive" i] {
+      color: cyan;
+    }
+
+    /* <a> element yang menerapkan nilai pada href dengan akhiran ".org" */
+    a[href$=".org"] {
+      color: red;
+    }
+
+    li {
+      display: inline;
+
+      margin-left: 5px;
+    }
+
+    .container {
+      width: 800px;
+      border: 4px solid black;
+      padding: 10px;
+    }
+
+    img {
+      float: left;
+      margin: 10px;
+    }
+  </style>
+</head>
+<div class="content">
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate eius
+    explicabo fuga iusto magni minus odit praesentium, quasi quisquam quos
+    repellat suscipit tempora tenetur? Assumenda cum laborum officiis quos
+    ratione.
+  </p>
+</div>
+
+<body>
+  <div class="header">
+    <h1>Bandung</h1>
+    <p>
+      Kota metropolitan terbesar di Provinsi Jawa Barat, sekaligus menjadi ibu
+      kota provinsi tersebut.
+    </p>
+    <div class="nav">
+      <ul>
+        <li><a href="#sejarah">Sejarah</a></li>
+        <li><a href="#geografis">Geografis</a></li>
+        <li><a href="#wisata">Wisata</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <blockquote>
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut eius error
+    explicabo ipsum molestiae necessitatibus nesciunt possimus reprehenderit
+    sed voluptates. Aliquam aspernatur autem est nobis officia praesentium
+    quas recusandae rem.
+  </blockquote>
+
+  <p>
+    Ini merupakan paragraf pertama. Rule styling tidak akan diterapkan pada
+    elemen paragraf ini.
+  </p>
+  <img src="https://i.imgur.com/cs2BJzw.jpg" alt="Dicoding logo" width="400px" />
+  <p>
+    Ini merupakan paragraf kedua dan ditetapkan setelah elemen gambar. Maka
+    paragraf ini menerapkan rule dengan menampilkan teks berwarna hijau.
+  </p>
+  <div>
+    <p>
+      Ini merupakan paragraf ketiga, letaknya setelah elemen gambar, namun
+      paragraf ini dibungkus di dalam div sehingga paragraf ini tidak akan
+      menerapkan rule styling karena tidak memiliki induk yang sama.
+    </p>
+  </div>
+  <p>
+    Ini merupakan paragraf empat. Letaknya memang setelah elemen gambar dan
+    memiliki induk yang sama seperti elemen gambar, sehingga elemen ini akan
+    menerapkan rule dengan menampilkan teks berwarna hijau.
+  </p>
+
+  <div class="sidebar">
+    <h1 class="fancy">
+      Heading dengan teks berwarna merah dan background biru langit
+    </h1>
+    <p class="fancy">what the fuck bro</p>
+
+    <div id="special">
+      <p>Ini merupakan konten di dalam sebuah div yang diberi id special.</p>
+    </div>
+
+    <ul>
+      <li><a href="#internal">Internal link</a></li>
+      <li><a href="http://example.com">Example link</a></li>
+      <li><a href="#InSensitive">Insensitive internal link</a></li>
+      <li><a href="http://example.org">Example org link</a></li>
+    </ul>
+  </div>
+
+  <div class="main">
+    <div class="content">
+      <div class="section">
+        <div class="article1">
+          <aside>
+            <div class="header">
+              <h1>Judul Artikel</h1>
+              <h2>Oleh: Dimas Ramdani</h2>
+            </div>
+            <p>KONTENT ARTIKEL DIMULAI DARI SINI</p>
+            <div class="footer">
+              <ul>
+                <li><a href="#">twitter</a></li>
+                <li><a href="#">facebook</a></li>
+                <li><a href="#">instagram</a></li>
+              </ul>
+            </div>
+          </aside>
+        </div>
+      </div>
+
+      <br />
+
+      <div class="section">
+        <div class="article2">
+          <aside>
+            <div class="header">
+              <h1>judul artikel</h1>
+              <h2>oleh : Dimas Ramdani</h2>
+            </div>
+            <p>
+              Untuk membuat sebuah bakso kita membutuhkan
+              <span class="bahan">daging sapi</span>,
+              <span class="bahan">tepung tapioka</span>,
+              <span class="bahan">bawang merah</span> dan
+              <span class="bahan">bawang putih</span> kemudian satu sendok
+              makan <span class="bahan">gula</span> dan
+              <span class="bahan">garam.</span>
+            </p>
+            <div class="footer">
+              <ul>
+                <li><a href="#">twitter</a></li>
+                <li><a href="#">facebook</a></li>
+                <li><a href="#">instagram</a></li>
+              </ul>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <h1>Lorem ipsum dolor sit amet.</h1>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium iusto non optio vel voluptas? Assumenda
+    blanditiis consequatur doloribus porro quasi similique vero voluptatibus. Adipisci, tenetur.</p>
+  <p class="relative">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus commodi consectetur dolore
+    eligendi, esse fuga hic laboriosam nobis nostrum, nulla omnis optio pariatur repellendus reprehenderit saepe, sit
+    soluta vel vero!</p>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci aut corporis deleniti doloremque et excepturi
+    expedita labore libero, placeat, quaerat rerum ullam vitae voluptate. Accusantium et explicabo qui tenetur unde.
+    Amet aperiam doloremque enim, expedita id illo minima porro quod.</p>
+
+
+  <br />
+  <div class="footer">
+    &copy; 2022,Dimas Ramdani
+    <ul>
+      <li>agil : <span class="phone">0000000</span></li>
+    </ul>
+  </div>
+</body>
+
+</html>
