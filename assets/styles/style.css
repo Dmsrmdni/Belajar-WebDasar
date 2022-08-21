@@ -8,14 +8,7 @@ h2,h3{
     color: rgba(18, 129, 239, 0.852);
 }
 
-
-nav a:hover{
-    font-size: 18px;
-    text-decoration:none;
-    color: white;
-    font-weight: bold;
-}
-    
+ 
 .profil header{
  text-align: center;   
  width: 100%;
@@ -40,6 +33,10 @@ nav a:hover{
     margin-top: 20px;
 }
 
+header {
+   display: inline;
+}
+
 .jumbutron{
     padding:60px;
     background-color: #00c8eb;
@@ -51,11 +48,18 @@ nav a:hover{
 nav {
    background-color: #00a2c6;
    padding: 5px;
+   position: sticky;
    top: 0;
-   right: 0;
-   left: 0;
-   position: fixed;
 }
+
+
+nav a:hover{
+    font-size: 18px;
+    text-decoration:none;
+    color: white;
+    font-weight: bold;
+}
+   
 
 nav li{
     display: inline;
@@ -63,9 +67,6 @@ nav li{
     margin-right: 20px;
 }
 
-header {
-   display: inline;
-}
 
 
 main {
